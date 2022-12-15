@@ -28,6 +28,9 @@ Realizar los siguientes endponts para ser consumidos desde FrontEnd usando el le
 ### Responsive
 El prototipo dado esta diseñado en mobile, a pesar de no tener la versión desktop debe ser responsive. Ej: en pantallas desktop el grid de productos puede cambiar a 4 columnas.
 
+### Entrega
+El periodo de tiempo de prueba es de 2 dias y se debera enviar la invitacion al repositorio al usuario David842
+
 ## Bonus
 Utilizar la siguiente tecnologia para empaquetar en un contenedor el desarrollo FrontEnd y otro para el desarrollo de BackEnd
 - [Docker](https://www.docker.com)
