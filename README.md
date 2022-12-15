@@ -17,6 +17,8 @@ Se debe de construir la maquetacion con Vue Js 2 y realizar las siguiente funcio
 - Filtrar productos por categoria
 - Visualizar detalle del producto al dar clic
 
+![Aquí la descripción de la imagen por si no carga](https://github.com/DesarrolloEKS/PruebaTecnicaFullStackVue-GO/blob/main/Restaurant%20App.jpg)
+
 # Prueba BackEnd
 
 Realizar los siguientes endponts para ser consumidos desde FrontEnd usando el lenguaje Go Lang
