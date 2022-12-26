@@ -28,6 +28,7 @@ var plantillas = template.Must(template.ParseGlob("plantillas/*"))
 func main() {
 	http.HandleFunc("/", inicio)
 	http.HandleFunc("/detalles", detalles)
+	http.HandleFunc("/filtros", filtros)
 
 	log.Println("Esta cosa esta jalando")
 	http.ListenAndServe(":3060", nil)
@@ -113,4 +114,40 @@ func detalles(w http.ResponseWriter, r *http.Request) {
 	}
 	plantillas.ExecuteTemplate(w, "detalles", arregloplatillo)
 
+}
+
+func filtros(w http.ResponseWriter, r *http.Request) {
+	if r.Method == "POST" {
+		tipo := r.FormValue("tipo")
+		con := conexionBD()
+		registro, err := con.Query("SELECT * FROM platillos WHERE tipo=?", tipo)
+		if err != nil {
+			panic(err)
+		}
+		platillo := Platillos{}
+		arregloplatillo := []Platillos{}
+
+		for registro.Next() {
+			var tipo, idplatillo int
+			var precio float32
+			var nombre, imagen, detalles string
+
+			err = registro.Scan(&idplatillo, &nombre, &precio, &imagen, &detalles, &tipo)
+
+			if err != nil {
+				panic(err)
+			}
+			platillo.IDPlatillo = idplatillo
+			platillo.Nombre = nombre
+			platillo.Precio = float32(precio)
+			platillo.Imagen = imagen
+			platillo.Detalles = detalles
+			platillo.Tipo = tipo
+
+			arregloplatillo = append(arregloplatillo, platillo)
+
+		}
+		plantillas.ExecuteTemplate(w, "filtros", arregloplatillo)
+
+	}
 }

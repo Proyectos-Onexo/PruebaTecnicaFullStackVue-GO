@@ -1,20 +1,20 @@
-{{define "inicio"}}
+{{define "detalles"}}
 {{template "cabecera"}}
 
   <section>
     <div class="container">
         <div class="row">
-        
 
 {{range.}}
         
-            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 my-2">
+            <div class="col-12 my-2">
                 <div class="card text-left">
                   <img class="card-img-top" src='{{.Imagen}}' alt="">
                   <div class="card-body">
                     <h4 class="card-title">{{.Nombre}}</h4>
                     <p class="card-text">{{.Detalles}}</p>
                     <span>$USD {{.Precio}}</span>
+                 
                   </div>
                 </div>
             </div>
@@ -25,8 +25,6 @@
     </div>
   </section>
 
-    </tbody>
-  </table>
 
   
 {{template "pie"}}

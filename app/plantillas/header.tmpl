@@ -1,0 +1,16 @@
+{{define "header"}}
+
+   <form action="/filtros" method="post">
+  <div class="form-group">
+    <label for="tipo">Selecciona el tipo de comida</label>
+   <select name="tipo" id="tipo">
+       <option value="1">Comida Rápida</option>
+       <option value="2" selected>Comida China</option>
+       <option value="3">Comida Indú</option>
+
+   </select>
+  </div>
+  <button type="submit"> Buscar </button>
+</form>
+
+{{end}}
