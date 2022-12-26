@@ -1,0 +1,32 @@
+{{define "detalles"}}
+{{template "cabecera"}}
+
+  <section>
+    <div class="container">
+        <div class="row">
+
+{{range.}}
+        
+            <div class="col-12 my-2">
+                <div class="card text-left">
+                  <img class="card-img-top" src='{{.Imagen}}' alt="">
+                  <div class="card-body">
+                    <h4 class="card-title">{{.Nombre}}</h4>
+                    <p class="card-text">{{.Detalles}}</p>
+                    <span>$USD {{.Precio}}</span>
+                 
+                  </div>
+                </div>
+            </div>
+
+{{end}}
+
+        </div>
+    </div>
+  </section>
+
+
+  
+{{template "pie"}}
+
+{{end}}
