@@ -25,8 +25,17 @@ Realizar los siguientes endponts para ser consumidos desde FrontEnd usando el le
 - Obtener Categorias
 - Obtener productos por categoria
 
+### Requerimientos tecnicos
+- Utilizar un middleware
+- Agregar seguridad por token en las apis
+
+
 ### Responsive
 El prototipo dado esta diseñado en mobile, a pesar de no tener la versión desktop debe ser responsive. Ej: en pantallas desktop el grid de productos puede cambiar a 4 columnas.
+
+### Requerimientos tecnicos
+- Utilizar componentes
+- Utilizar VueStore
 
 ### Entrega
 El periodo de tiempo de prueba es de 2 dias y se debera enviar la invitacion al repositorio al usuario David842
